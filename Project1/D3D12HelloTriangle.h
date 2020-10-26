@@ -75,6 +75,11 @@ private:
     ComPtr<ID3DBlob> m_clearUAVShader;
     ComPtr<ID3D12RootSignature> m_computeRootSignature;
     ComPtr<ID3D12PipelineState> m_computeState;
+    ComPtr<ID3D12Resource> m_depthStencil;
+    ComPtr<ID3D12DescriptorHeap> m_dsvHeap;
+    ComPtr<ID3D12QueryHeap> m_queryHeap;
+    ComPtr<ID3D12PipelineState> m_queryState;
+    ComPtr<ID3D12PipelineState> m_prepassState;
 
     void LoadPipeline();
     void LoadAssets();
